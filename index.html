@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Random</title>
+</head>
+    <style>
+        body {
+            background: rgb(32, 32, 70);
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        div {
+            background-color: rgb(233, 232, 232);
+            text-align: center;
+            margin: 70px auto;
+            width: 30%;
+            padding: 50px;
+            border-radius: 20px;
+        }
+
+        button {
+            background-color: rgb(54, 228, 54);
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            width: 120px;
+            cursor: pointer;
+        }
+
+         p {
+            font-size: 50px;
+        }
+
+        button:hover {
+            background-color: rgb(65, 153, 65);
+            color: white;
+        }
+        
+    </style>
+
+<body>
+    
+
+    <div>
+        <h1>Dice Game</h1>
+        <p id="par1"></p>
+        <h3>click the button to roll dice! </h3>
+        <button onclick="roll()">Roll Dice</button>
+    </div>
+
+
+    <script>
+        
+
+        function roll(){
+            var element = document.querySelector("#par1")
+            element.innerHTML = Math.floor(Math.random() * 7);
+        }
+    </script>
+
+</body>
+</html>
